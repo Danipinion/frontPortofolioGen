@@ -1,0 +1,260 @@
+/* 
+=============VARIABLE================
+*/
+:root{
+  /*COLOR*/
+  --color-primary: #4c13d1;
+  --color-secondary: #fbf8f3;
+  --text-color-primary: white;
+  --text-color-secondary: black;
+  /*TYPOGRAPY*/
+  --font-primary: 'Quicksand', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+  --font-weight-extralight: 200;
+
+  /**/
+}
+/* 
+=============CSS RESET================
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    color: black;
+    font-family: var(--font-primary);
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 
+=============REUSEABLE================
+*/
+.container{
+    padding-block: 1.3rem;
+    padding-inline: 5rem;
+}
+.btn{
+    padding: 1.2rem 1.4rem;
+    border: none;
+    border-radius: .3rem;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: var(--font-weight-semibold);
+}
+.btn.primary{
+    background-color: var(--color-primary);
+    color: var(--text-color-primary);
+}
+.btn.secondary{
+    background-color: var(--text-color-primary);
+    color: var(--color-primary);
+}
+/* 
+=============CHANGE AREA================
+*/
+
+/* 
+=============LOBBY================
+*/
+/* navbar */
+header{
+    background-color: var(--color-secondary);
+    height: 100vh;
+    width: 100%;
+    margin-block-end: 2em;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 2rem;
+}
+.logo a{
+    font-size: 2em;
+    font-weight: var(--font-weight-semibold);
+}
+.feature ul{
+    display: flex;
+    font-size: 1em;
+}
+.feature ul li{
+    margin-inline-end: .5em;
+    font-weight: var(--font-weight-medium);
+}
+
+/* hero */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: var(--font-weight-medium );
+}
+.hero-detail{
+    width: 100%;
+    margin-block-start: -1em;
+}
+.hero-detail .rated{
+    display: flex;
+    margin-block-end: 1.6em;
+}
+.rate{
+    margin-inline-start: 1em;
+}
+.hero-title h1{
+    font-weight: var(--font-weight-bold);
+    font-size: 4.5em;
+    margin-block-end: .3em;
+}
+.hero-btn{
+    margin-block-end: 1.2em;
+}
+.hero-subtitle p{
+    font-weight: var(--font-weight-regular);
+    font-size: 1.3em;
+    margin-block-end: .3em;
+    line-height: 1.4em;
+    margin-block-end: .3em;
+    opacity: .6;
+}
+.link.primary{
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-size: 1.4em;
+    margin-inline-start: 1em;
+    font-weight: var(--font-weight-bold);
+}
+.hero-info {
+    display: flex;
+}
+.hero-info p{
+    display: flex;
+    align-items: center;
+}
+.hero-info p:nth-child(2){
+    margin-inline-start: 1em;
+}
+.hero-info p img{
+    margin-inline-end: .5em;
+
+}
+.hero-img{
+    width: 80%;
+}
+.hero-img img{
+    width: 100%;
+}
+/*  about */
+.about{
+    margin-block-end: 3em;
+}
+.why h4{
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    font-size:1.3em;
+    margin-block-end: 1em;
+}
+.why h1{
+    font-weight: var(--font-weight-bold);
+    font-size:3.3em;
+    width: 50%;
+    margin-block-end: .8em;
+}
+.cards{
+    display: flex;
+}
+.card{
+    margin-inline-end: 1em;
+}
+.card img{
+    margin-block-end: .5em;
+}
+.card h3{
+    font-weight: var(--font-weight-bold);
+    margin-block-end: .5em;
+    font-size: 1.2em;
+}
+.card p{
+    font-size: 1.2em;
+    width: 90%;
+    opacity: .6;
+}
+
+/* trial */
+.trial-wrapper{
+    background-color: var(--color-primary);
+    display: flex;
+    border-radius: 2em;
+    padding-inline: 2em;
+    padding-block-start: 2em ;
+}
+.deskription{
+    margin-block-start: 8em;
+    width: 70%;
+}
+.deskription h1{
+    color: var(--text-color-primary);
+    font-size: 3em;
+    font-weight: var(--font-weight-bold);
+    margin-block-end: .7em;
+}
+.deskription p{
+    color: var(--text-color-primary);
+    font-size: 1.2em;
+    font-weight: var(--font-weight-medium);
+    margin-block-end: 2em;
+}
+.trial-img{
+    width: 70%;
+}
+.trial-img img{
+    width: 100%;
+    margin-block-end: -2px;
+}
+
+
+/* 
+=============LOGIN================
+*/
+KAMU DISINI FI
+
