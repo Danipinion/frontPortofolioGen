@@ -15,6 +15,7 @@
   --font-weight-regular: 400;
   --font-weight-light: 300;
   --font-weight-extralight: 200;
+  --border-primary:rgba(0, 0, 0, 0.2)
 
   /**/
 }
@@ -51,6 +52,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -100,7 +102,6 @@ table {
 /* navbar */
 header{
     background-color: var(--color-secondary);
-    height: 100vh;
     width: 100%;
     margin-block-end: 2em;
 }
@@ -122,10 +123,14 @@ header{
     margin-inline-end: .5em;
     font-weight: var(--font-weight-medium);
 }
+.hamburger{
+    display: none;
+}
 
 /* hero */
 .hero{
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     font-weight: var(--font-weight-medium );
@@ -180,6 +185,7 @@ header{
 }
 .hero-img{
     width: 80%;
+
 }
 .hero-img img{
     width: 100%;
@@ -221,6 +227,9 @@ header{
 }
 
 /* trial */
+.trial{
+    margin-block-end: 2rem;
+}
 .trial-wrapper{
     background-color: var(--color-primary);
     display: flex;
@@ -252,9 +261,160 @@ header{
     margin-block-end: -2px;
 }
 
+/* Review */
+.review{
+    margin-block-end: 2rem;
+}
+.container-review{
+    padding-block: 1.3rem;
+    padding-inline-start: 5rem;
+    width: 101%;
+}
+.review .card{
+    padding: 2em;
+    margin-inline: 1rem;
+    border: 1px solid var(--border-primary);
+    border-radius: .4em;
+}
+.review .card p{
+    opacity: 1;
+}
+
+.review .card .card-header {
+    display: flex;
+    align-items: center;
+    margin-block-end: 1em;
+}
+.profile{
+    margin-block-start: -10px;
+}
+.review .card .card-header p{
+   width: 100%;
+   margin-inline-start: 1rem;
+   padding-block-end: 3px;
+}
+.profile .card-title{
+    color: var(--color-primary);
+    font-size: 1.3em;
+    font-weight: var(--font-weight-bold);
+}
+.profile .renevue{
+    font-size: 1em;
+}
+.card-deks{
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2em;
+    margin-block-end: 1em;
+}
+.review .card .btn{
+    border: 1px solid var(--border-primary);
+    width: 100%;
+}
+
+/* footer */
+footer{
+    background-color: var(--color-secondary);
+    height: 100%;
+}
+.grid{
+    display: flex;
+}
+.row{
+    padding-inline:2em;
+    padding-block:2em 1em;
+}
+.row:nth-child(1){
+    width: 50%;
+}
+.row-content h1{
+    font-size: 1.1em;
+    font-weight: var(--font-weight-bold);
+    margin-block-end: .9em;
+}
+.row-content p{
+    margin-block-end: .9em;
+    width: 90%;
+}
+.row-content ul li{
+    margin-block-end: .7em;
+}
 
 /* 
 =============LOGIN================
 */
-KAMU DISINI FI
+/* KAMU DISINI FI */
+
+
+/* 
+=============RESPONSIVE MOBILE PHONE================
+*/
+/* HOME */
+@media screen and (max-width:767px) {
+    /* 
+    =============REUSEABLE================
+    */
+    .container{
+        padding-block: 1rem;
+        padding-inline: 2rem;
+    }
+    /* home */
+    .nav{
+        margin-block-end: 0rem;
+    }
+    .feature, .acces, .hero-detail .rated{
+        display: none;
+    }
+    .hamburger{display: block;}
+    /* hero */
+    .hero{
+        display: block;
+        font-weight: var(--font-weight-medium );
+    }
+    .hero-title h1{
+        font-weight: var(--font-weight-bold);
+        font-size: 3em;
+        margin-block-end: .3em;
+    }
+    .hero-btn{
+        margin-block-end: 1.2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+    .hero-subtitle p{
+        font-weight: var(--font-weight-regular);
+        font-size: 1.3em;
+        margin-block-end: .3em;
+        line-height: 1.4em;
+        margin-block-end: .5em;
+        opacity: .6;
+    }
+    .link.primary{
+        text-align: center;
+        color: var(--color-primary);
+        text-decoration: underline;
+        font-size: 1.4em;
+        margin-block: .7em;
+        font-weight: var(--font-weight-bold);
+    }
+    .hero-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-info p{
+        display: flex;
+        align-items: center;
+        margin-block-end: 1em;
+    }
+    .hero-info p:nth-child(2){
+        margin-inline-start: 0em;
+    }
+    .hero-info p img{
+        margin-inline-end: .5em;
+    }
+    .hero-img{
+        width: 100%;
+        margin-block-end: 2rem;
+    }
+}
 
