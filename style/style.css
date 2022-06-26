@@ -252,6 +252,7 @@ header{
     font-size: 1.2em;
     font-weight: var(--font-weight-medium);
     margin-block-end: 2em;
+    line-height: 1.3em;
 }
 .trial-img{
     width: 70%;
@@ -266,11 +267,12 @@ header{
     margin-block-end: 2rem;
 }
 .container-review{
-    padding-block: 1.3rem;
     padding-inline-start: 5rem;
+    padding-block: 1.3rem;
     width: 101%;
 }
 .review .card{
+    /* width: 100%; */
     padding: 2em;
     margin-inline: 1rem;
     border: 1px solid var(--border-primary);
@@ -312,10 +314,7 @@ header{
 }
 
 /* footer */
-footer{
-    background-color: var(--color-secondary);
-    height: 100%;
-}
+footer{background-color: var(--color-secondary);}
 .grid{
     display: flex;
 }
@@ -358,12 +357,8 @@ footer{
         padding-inline: 2rem;
     }
     /* home */
-    .nav{
-        margin-block-end: 0rem;
-    }
-    .feature, .acces, .hero-detail .rated{
-        display: none;
-    }
+    .nav{margin-block-end: 0rem; }
+    .feature, .acces, .hero-detail .rated{display: none;}
     .hamburger{display: block;}
     /* hero */
     .hero{
@@ -406,15 +401,65 @@ footer{
         align-items: center;
         margin-block-end: 1em;
     }
-    .hero-info p:nth-child(2){
-        margin-inline-start: 0em;
-    }
-    .hero-info p img{
-        margin-inline-end: .5em;
-    }
+    .hero-info p:nth-child(2){margin-inline-start: 0em;}
+    .hero-info p img{margin-inline-end: .5em;}
     .hero-img{
         width: 100%;
         margin-block-end: 2rem;
+    }
+    /* About */
+    .why h1{
+    font-weight: var(--font-weight-bold);
+    font-size:2.3em;
+    width: 100%;
+    margin-block-end: .8em;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{margin-block-end: 1em;}
+    .card h3{font-size: 1.5em;}
+    .card p{
+        font-size: 1.4em;
+        line-height: 1.2em;
+    }
+    /* trial */
+    .trial-wrapper{
+    border-radius: 1.2em;
+    padding-inline: 2em;
+    padding-block-start: 1em ;
+    flex-direction: column;
+    }
+    .deskription{
+    margin-block-start: 1em;
+    width: 100%;
+    }
+    .deskription h1{font-size: 2.3em;}
+    .deskription p{margin-block-end: 1em;}
+    .trial-img{width: 100%;}
+    .trial-img img{
+        margin-block-start: 1em;
+        height: 300px;
+        border-top-left-radius: .5em;
+        border-top-right-radius: .5em;
+    }
+    /* review */
+    .review{padding-inline: 1em;}
+    .container-review{
+        padding-inline: 0em;
+        width: 100%;
+    }
+    /* footer */
+    .grid{
+        flex-direction: column;
+    }
+    .row{
+        padding-inline:1em;
+        padding-block:.5em .5em;
+    }
+    .row:nth-child(1){
+        width: 100%;
     }
 }
 
