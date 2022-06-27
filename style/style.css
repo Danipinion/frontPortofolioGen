@@ -122,6 +122,7 @@ header{
     align-items: center;
     justify-content: space-between;
     margin-block-end: 2rem;
+    flex-wrap: nowrap;
 }
 .logo a{
     font-size: 2em;
