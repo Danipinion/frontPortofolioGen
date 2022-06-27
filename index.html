@@ -19,29 +19,44 @@
   
 </head>
 <body>
-
-<div class =   container> 
-  <div class = "tittle"> Create your Fiber account </div>
-  <form action = #>
-    <div class = "user detail"> 
-      <div class = "input-box"> 
-      <span class = "detail-user"> Your Name</span>
-      <input type="text" placeholder ="Enter your name" required> </input>
-      </div>
-      <div class = "input-box"> 
-      <span class = "Email-user"> Your Email</span>
-      <input type="text" placeholder ="Enter your Email" required> </input>
-      </div>
-      <div class = "input-box"> 
-      <span class = "Password-user"> Password</span>
-      <input type="text" placeholder ="Enter your Passsword" required> </input>
+  <div class="signUp">
+    <!-- form -->
+    <div class="form">
+      <div class="container">
+        <h1>Fiber</h1>
+        <form method="Home.html">
+          <h1>Create your Fiber account</h1>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" email="email" placeholder="john@example.com">
+          <label for="pass">Password</label>
+          <input type="password" id="pass" email="pass" placeholder="At least 8 characters" max="8">
+          <div class="check">
+            <input type="checkbox" name="check" class="btn-check">
+            <p>By creating an account on Fiber, you agree to the <span class="highlight"> Terms & Conditions.</span></p>
+          </div>
+          <a href="Home.html" class="btn primary">Create Fiber Account</a>
+          <p class="sign">Already have an account? <a href="Home.html" class="highlight">Sign in</a></p>
+        </form>
       </div>
     </div>
-  </form>
-</div>
-<div class="button"> 
-  <input type="submit" value = Register Now> </input>
-</div>
+    <!-- asside -->
+    <div class="left-sign">
+      <div class="container sign">
+        <img src="./Assets/Sign Up Image.png" alt="signUp" class="signupimg">
+        <h1>Unparaleled Templates</h1>
+        <p>Crafted by a team of profesional designers, our templates are eun paralleled in the market.</p>
+        <div class="pagination">
+          <div class="page active"></div>
+          <div class="page"></div>
+          <div class="page"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page"></div>
+  </div>
+  
   
   
 

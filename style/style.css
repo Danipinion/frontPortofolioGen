@@ -15,6 +15,7 @@
   --font-weight-regular: 400;
   --font-weight-light: 300;
   --font-weight-extralight: 200;
+  --border-primary:rgba(0, 0, 0, 0.2)
 
   /**/
 }
@@ -51,6 +52,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -81,6 +83,7 @@ table {
     background-color: transparent;
     font-size: 1em;
     font-weight: var(--font-weight-semibold);
+    cursor: pointer;
 }
 .btn.primary{
     background-color: var(--color-primary);
@@ -89,6 +92,17 @@ table {
 .btn.secondary{
     background-color: var(--text-color-primary);
     color: var(--color-primary);
+}
+.highlight{
+    color: var(--color-primary);
+}
+a.btn {
+    width: 100%;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-align: center;
+    /* padding-inline-start: 15em; */
 }
 /* 
 =============CHANGE AREA================
@@ -100,7 +114,6 @@ table {
 /* navbar */
 header{
     background-color: var(--color-secondary);
-    height: 100vh;
     width: 100%;
     margin-block-end: 2em;
 }
@@ -122,10 +135,14 @@ header{
     margin-inline-end: .5em;
     font-weight: var(--font-weight-medium);
 }
+.hamburger{
+    display: none;
+}
 
 /* hero */
 .hero{
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     font-weight: var(--font-weight-medium );
@@ -180,6 +197,7 @@ header{
 }
 .hero-img{
     width: 80%;
+
 }
 .hero-img img{
     width: 100%;
@@ -221,6 +239,9 @@ header{
 }
 
 /* trial */
+.trial{
+    margin-block-end: 2rem;
+}
 .trial-wrapper{
     background-color: var(--color-primary);
     display: flex;
@@ -243,6 +264,7 @@ header{
     font-size: 1.2em;
     font-weight: var(--font-weight-medium);
     margin-block-end: 2em;
+    line-height: 1.3em;
 }
 .trial-img{
     width: 70%;
@@ -252,9 +274,295 @@ header{
     margin-block-end: -2px;
 }
 
+/* Review */
+.review{
+    margin-block-end: 2rem;
+}
+.container-review{
+    padding-inline-start: 5rem;
+    padding-block: 1.3rem;
+    width: 101%;
+}
+.review .card{
+    /* width: 100%; */
+    padding: 2em;
+    margin-inline: 1rem;
+    border: 1px solid var(--border-primary);
+    border-radius: .4em;
+}
+.review .card p{
+    opacity: 1;
+}
+
+.review .card .card-header {
+    display: flex;
+    align-items: center;
+    margin-block-end: 1em;
+}
+.profile{
+    margin-block-start: -10px;
+}
+.review .card .card-header p{
+   width: 100%;
+   margin-inline-start: 1rem;
+   padding-block-end: 3px;
+}
+.profile .card-title{
+    color: var(--color-primary);
+    font-size: 1.3em;
+    font-weight: var(--font-weight-bold);
+}
+.profile .renevue{
+    font-size: 1em;
+}
+.card-deks{
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2em;
+    margin-block-end: 1em;
+}
+.review .card .btn{
+    border: 1px solid var(--border-primary);
+    width: 100%;
+}
+
+/* footer */
+footer{background-color: var(--color-secondary);}
+.grid{
+    display: flex;
+}
+.row{
+    padding-inline:2em;
+    padding-block:2em 1em;
+}
+.row:nth-child(1){
+    width: 50%;
+}
+.row-content h1{
+    font-size: 1.1em;
+    font-weight: var(--font-weight-bold);
+    margin-block-end: .9em;
+}
+.row-content p{
+    margin-block-end: .9em;
+    width: 90%;
+}
+.row-content ul li{
+    margin-block-end: .7em;
+}
 
 /* 
 =============LOGIN================
 */
-KAMU DISINI FI
+/* form */
+.signUp{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.form form label,
+.signUp h1{
+    font-weight: var(--font-weight-bold);
+    font-size: 1.4em;
+}
+.form{
+    width: 100%;
+}
+.form form h1{
+    font-size: 2.4em;
+    margin-block:1em;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+.form form label{font-size: 1.2em;}
+.form form input{
+    border: 1px solid var(--border-primary) ;
+    border-radius: .3em;
+    padding: 1em;
+    margin-block: .3em 2em;
+    font-size: 1em;
+    font-weight: var(--font-weight-regular);
+}
+.check {
+    display: flex;
+    align-items: center;
+    margin-block-end: 1em;
+    font-size: 1.1em;
+}
+.check .btn-check{
+    margin: 0;
+    margin-inline-end: .4em;
+}
+.check p .highlight{
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
+}
+.sign{
+    text-align: center;
+    margin-block-start: 1em;
+    font-weight: var(--font-weight-medium);
+}
+/* asside */
+.left-sign{
+    background-color: var(--color-primary);
+    width: 100%;
+    padding-block-start:1.5em ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-sign p,
+.left-sign h1{
+    color: var(--text-color-primary);
+    margin-block-end: .6em;
+}
+.sign img{
+    width: 90%;
+    margin-block-end:1.5em ;
+    box-shadow: 0 -2 20px rgba(255, 255, 255, .3);
+}
+.pagination{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.page{
+    margin-inline-end:.3em ;
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .5);
+    margin-block-end: .4em;
+}
+.page.active{
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+
+
+/* 
+=============RESPONSIVE MOBILE PHONE================
+*/
+
+@media screen and (max-width:767px) {
+    /* 
+    =============REUSEABLE================
+    */
+    .container{
+        padding-block: 1rem;
+        padding-inline: 2rem;
+    }
+    /* 
+    =============Lobby================
+    */
+    
+    /* home */
+    .nav{margin-block-end: 0rem; }
+    .feature, .acces, .hero-detail .rated{display: none;}
+    .hamburger{display: block;}
+    /* hero */
+    .hero{
+        display: block;
+        font-weight: var(--font-weight-medium );
+    }
+    .hero-title h1{
+        font-weight: var(--font-weight-bold);
+        font-size: 3em;
+        margin-block-end: .3em;
+    }
+    .hero-btn{
+        margin-block-end: 1.2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+    .hero-subtitle p{
+        font-weight: var(--font-weight-regular);
+        font-size: 1.3em;
+        margin-block-end: .3em;
+        line-height: 1.4em;
+        margin-block-end: .5em;
+        opacity: .6;
+    }
+    .link.primary{
+        text-align: center;
+        color: var(--color-primary);
+        text-decoration: underline;
+        font-size: 1.4em;
+        margin-block: .7em;
+        font-weight: var(--font-weight-bold);
+    }
+    .hero-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-info p{
+        display: flex;
+        align-items: center;
+        margin-block-end: 1em;
+    }
+    .hero-info p:nth-child(2){margin-inline-start: 0em;}
+    .hero-info p img{margin-inline-end: .5em;}
+    .hero-img{
+        width: 100%;
+        margin-block-end: 2rem;
+    }
+    /* About */
+    .why h1{
+    font-weight: var(--font-weight-bold);
+    font-size:2.3em;
+    width: 100%;
+    margin-block-end: .8em;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{margin-block-end: 1em;}
+    .card h3{font-size: 1.5em;}
+    .card p{
+        font-size: 1.4em;
+        line-height: 1.2em;
+    }
+    /* trial */
+    .trial-wrapper{
+    border-radius: 1.2em;
+    padding-inline: 2em;
+    padding-block-start: 1em ;
+    flex-direction: column;
+    }
+    .deskription{
+    margin-block-start: 1em;
+    width: 100%;
+    }
+    .deskription h1{font-size: 2.3em;}
+    .deskription p{margin-block-end: 1em;}
+    .trial-img{width: 100%;}
+    .trial-img img{
+        margin-block-start: 1em;
+        height: 300px;
+        border-top-left-radius: .5em;
+        border-top-right-radius: .5em;
+    }
+    /* review */
+    .review{padding-inline: 1em;}
+    .container-review{
+        padding-inline: 0em;
+        width: 100%;
+    }
+    /* footer */
+    .grid{flex-direction: column; }
+    .row{
+        padding-inline:1em;
+        padding-block:.5em .5em;
+    }
+    .row:nth-child(1){width: 100%;}
+    /* 
+    =============Login================
+    */
+   .left-sign{ display: none;}
+   .check .btn-check{margin-block-end: .9em;}
+}
 
